@@ -5,7 +5,6 @@ I'm glad you came to visit my project, let me give you a guide. The framework of
   1.object library
   2.operational level
   3.business level
- 2.data: there are data of test cases, when we write data driven tests, we can put the data prepared in this directory.
  3.report: the allure generates the test report in here.
  4.scripts: we write the test cases in here.
  5.utils: we encapsulate some methods that we commonly use.
