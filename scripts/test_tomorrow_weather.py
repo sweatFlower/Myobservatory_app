@@ -20,8 +20,11 @@ class TestTomorrowWeather:
 
     # Define test methods
     @allure.story("Check tomorrow weather")
-    def test_tomorrow_weather(self):
+    @pytest.mark.parametrize("check_date, weather_number", [("4 Oct", 0)])
+    def test_tomorrow_weather(self, check_date, weather_number):
         self.indxe_proxy.find_channel("9-Day Forecast")
-        assert is_exist(UtilsDriver.get_app_driver(), "4 Oct")
-        self.forecast_proxy.print_weather(0)
+        # Input the date I want to check
+        assert is_exist(UtilsDriver.get_app_driver(), check_date)
+        # Input the number of the weather I want to check
+        self.forecast_proxy.print_weather(weather_number)
 
