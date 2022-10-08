@@ -26,8 +26,8 @@ class ForecastPage(BasePage):
         return self.get_elements(self.date)[num]
 
     # Find temperature
-    def find_temperature(self):
-        return self.get_element(self.temperature)
+    def find_temperature(self,num):
+        return self.get_elements(self.temperature)[num]
 
     # Find humidity
     def find_humidity(self,num):
